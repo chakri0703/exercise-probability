@@ -1,14 +1,18 @@
 package com.thoughtworks.bootcamp;
 
 public class Probability {
-    private float tossingProbability;
+    private float probabilityValue;
     Probability(float probability){
-        this.tossingProbability=probability;
+        this.probabilityValue =probability;
     }
 
 
     public boolean equals(Object obj){
-        return true;
+
+      return this.probabilityValue ==((Probability) obj).probabilityValue;
     }
 
+    public float eventsNotHappened() {
+        return 1.0f;
+    }
 }
