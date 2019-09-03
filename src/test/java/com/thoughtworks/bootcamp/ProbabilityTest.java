@@ -41,10 +41,17 @@ public class ProbabilityTest {
     }
 
     @Test
-    void givenZeroEventsHappened_whenEventsHappenedTogether_thenShouldReturnZero(){
+    void givenBothZeroEventsHappened_whenEventsHappenedTogether_thenShouldReturnZero(){
         float zero=0.0f;
         Probability events=new Probability(zero,zero);
         assertEquals(0.0f,events.eventsHappenedTogether());
+    }
+
+    @Test
+    void givenBothOneEventsHappened_whenEventsHappenedTogether_thenShouldReturnOne(){
+        float one=1.0f;
+        Probability events=new Probability(one,one);
+        assertEquals(1.0f,events.eventsHappenedTogether());
     }
 
 }
