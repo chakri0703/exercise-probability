@@ -54,4 +54,10 @@ public class ProbabilityTest {
         assertEquals(1.0f,events.eventsHappenedTogether());
     }
 
+    @Test
+    void givenBothEventsHappenedBetweenZeroAndOne_whenEventsHappenedTogether_whenShouldReturnValueBetweenZeroAndOne(){
+        Probability events=new Probability(0.1f,0.5f);
+        assertEquals(0.05f,events.eventsHappenedTogether());
+    }
+
 }

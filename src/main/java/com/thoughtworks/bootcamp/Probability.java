@@ -22,9 +22,7 @@ public class Probability {
     }
 
     public float eventsHappenedTogether() {
-        if(probabilityValue1==1){
-            return 1.0f;
-        }
-        return 0.0f;
+
+        return (float)(probabilityValue1*probabilityValue);
     }
 }
