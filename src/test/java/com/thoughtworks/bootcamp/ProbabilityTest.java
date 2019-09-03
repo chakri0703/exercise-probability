@@ -32,4 +32,12 @@ public class ProbabilityTest {
         Probability events=new Probability(1.0f);
         assertEquals(0.0f,events.eventsNotHappened());
     }
+
+    @Test
+    void givenAFloatNumberBetweenZeroAndOneEventsHappened_whenCalculateEventNotHappened_thenShouldReturnFloatValueBetweenZeroAndOne(){
+
+        Probability events=new Probability(0.15f);
+        assertEquals(0.85f,events.eventsNotHappened());
+    }
+
 }

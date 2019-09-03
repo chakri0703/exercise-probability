@@ -14,9 +14,6 @@ public class Probability {
     }
 
     public float eventsNotHappened() {
-        if (probabilityValue==1){
-            return  0.0f;
-        }
-        return 1.0f;
+       return 1-probabilityValue;
     }
 }
