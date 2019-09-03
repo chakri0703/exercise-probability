@@ -40,4 +40,11 @@ public class ProbabilityTest {
         assertEquals(0.85f,events.eventsNotHappened());
     }
 
+    @Test
+    void givenZeroEventsHappened_whenEventsHappenedTogether_thenShouldReturnZero(){
+        float zero=0.0f;
+        Probability events=new Probability(zero,zero);
+        assertEquals(0.0f,events.eventsHappenedTogether());
+    }
+
 }
