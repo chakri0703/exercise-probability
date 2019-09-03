@@ -2,14 +2,15 @@ package com.thoughtworks.bootcamp;
 
 public class Probability {
     private float probabilityValue;
-    private float probabilityValue1;
+    private float probabilityValueTwo;
+
     Probability(float probability) {
         this.probabilityValue = probability;
     }
 
     Probability(float probabilityValue,float probabilityValue1){
         this.probabilityValue=probabilityValue;
-        this.probabilityValue1=probabilityValue1;
+        this.probabilityValueTwo =probabilityValue1;
     }
 
     public boolean equals(Object obj) {
@@ -23,6 +24,6 @@ public class Probability {
 
     public float eventsHappenedTogether() {
 
-        return (float)(probabilityValue1*probabilityValue);
+        return (float)(probabilityValueTwo *probabilityValue);
     }
 }
