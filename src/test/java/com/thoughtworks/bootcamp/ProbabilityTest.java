@@ -24,7 +24,12 @@ public class ProbabilityTest {
 
     @Test
     void givenZeroEventsHappened_whenCalculateEventNotHappened_thenShouldReturnOne(){
-        Probability eventsHappened=new Probability(0.0f);
-        assertEquals(1.0f,eventsHappened.eventsNotHappened());
+        Probability events=new Probability(0.0f);
+        assertEquals(1.0f,events.eventsNotHappened());
+    }
+    @Test
+    void givenOneEventHappened_whenCalculateEventNotHappened_thenShouldReturnZero(){
+        Probability events=new Probability(1.0f);
+        assertEquals(0.0f,events.eventsNotHappened());
     }
 }
