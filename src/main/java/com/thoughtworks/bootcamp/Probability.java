@@ -1,29 +1,26 @@
 package com.thoughtworks.bootcamp;
 
 public class Probability {
-    private float probabilityValue;
-    private float probabilityValueTwo;
+    private float value;
 
     Probability(float probability) {
-        this.probabilityValue = probability;
-    }
-
-    Probability(float probabilityValue,float probabilityValue1){
-        this.probabilityValue=probabilityValue;
-        this.probabilityValueTwo =probabilityValue1;
+        this.value = probability;
     }
 
     public boolean equals(Object obj) {
-
-        return this.probabilityValue == ((Probability) obj).probabilityValue;
+        return  this.value == ((Probability) obj).value;
     }
 
-    public float eventsNotHappened() {
-       return 1-probabilityValue;
+    public Probability not() {
+        return new Probability(1- value);
     }
 
-    public float eventsHappenedTogether() {
+    public Probability and( Object obj) {
+        return new Probability(((Probability) obj).value * value);
+    }
 
-        return (float)(probabilityValueTwo *probabilityValue);
+    public Probability or(Probability probabilityOfTossingACoin)
+    {
+        return  new Probability(value).not().and(new Probability(probabilityOfTossingACoin.value).not()).not();
     }
 }
